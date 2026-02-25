@@ -98,7 +98,7 @@ Configured in `dataset_info.toml` and loaded via `datasets`. Tested on CNN/DM, C
 
 ---
 
-## Repo structure (minimal)
+## Repo structure
 
 ```
 BLooP/
