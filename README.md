@@ -1,4 +1,4 @@
-# BLooP — Bi‑gram Lookahead Promotion (training‑free decoding for faithful summarization)
+# BLooP: Bi‑gram Lookahead Promotion (for faithful and training‑free summarization)
 
 BLooP is a training‑free decoding intervention that encourages decoder‑only LLMs to form bi‑grams present in the source document, improving summary faithfulness without modifying or fine‑tuning the underlying model. It works as a lightweight logits processor controlled by a single hyperparameter (α). Experiments show consistent ROUGE/BARTScore gains on [Llama‑3.1‑8B‑Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct), [Mistral‑Nemo‑Instruct‑2407](https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407), and [Gemma‑2‑9B‑IT](https://huggingface.co/google/gemma-2-9b-it) across CNN/DM, CCSum, Multi‑News, and SciTLDR, with human evaluation indicating improved faithfulness without reducing readability.
 
@@ -126,4 +126,4 @@ Released under the MIT License (see `LICENSE`).
 
 ## Acknowledgments
 
-This work used resources available through the National Research Platform (NRP) at the University of California, San Diego. NRP has been developed, and is supported in part, by funding from National Science Foundation, from awards 1730158, 1540112, 1541349, 1826967, 2112167, 2100237, and 2120019, as well as additional funding from community partners.
+We acknowledge grants from the National Science Foundation and Google for support for this research. This work used resources available through the National Research Platform (NRP) at the University of California, San Diego. NRP has been developed, and is supported in part, by funding from National Science Foundation, from awards 1730158, 1540112, 1541349, 1826967, 2112167, 2100237, and 2120019, as well as additional funding from community partners.
