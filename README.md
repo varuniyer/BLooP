@@ -13,7 +13,7 @@ At each generation step, BLooP checks whether the pair *(previous token, candida
 ## Installation
 
 ```bash
-git clone https://github.com/your-username/BLooP.git
+git clone https://github.com/varuniyer/BLooP.git
 cd BLooP
 
 python -m venv .venv
