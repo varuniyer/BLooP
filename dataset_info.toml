@@ -1,0 +1,35 @@
+[cnndm]
+name = "abisee/cnn_dailymail"
+subset = "3.0.0"
+doc_key = "article"
+ref_key = "highlights"
+
+[ccsum]
+name = "your_username/CCSum"
+subset = ""
+doc_key = "article"
+ref_key = "summary"
+
+[multinews]
+name = "alexfabbri/multi_news"
+subset = ""
+doc_key = "document"
+ref_key = "summary"
+
+[scitldr-abs]
+name = "allenai/scitldr"
+subset = "Abstract"
+doc_key = "source"
+ref_key = "target"
+
+[scitldr-aic]
+name = "allenai/scitldr"
+subset = "AIC"
+doc_key = "source"
+ref_key = "target"
+
+[scitldr-full]
+name = "allenai/scitldr"
+subset = "FullText"
+doc_key = "source"
+ref_key = "target"

@@ -1,0 +1,37 @@
+[project]
+name = "BLooP"
+version = "0.0.0"
+readme = "README.md"
+requires-python = "==3.10.16"
+
+dependencies = [
+    "torch==2.4.0",
+    "vllm==0.6.1",
+    "transformers==4.48.0",
+    "datasets==3.6.0",
+    "hf_xet==1.1.5",
+    "evaluate==0.4.3",
+    "rouge-score==0.1.2",
+    "nltk==3.9.1",
+    "wandb==0.18.5",
+    "typed-argument-parser==1.10.1",
+    "toml==0.10.2",
+    "matplotlib==3.10.3",
+    "numpy==1.26.4",
+    "scipy==1.15.3",
+    "spacy[cuda12x]==3.8.4",
+]
+
+
+[tool.ruff]
+exclude = ["bart_score.py", "__pycache__", ".venv"]
+lint.ignore = ["E722"]
+target-version = "py310"
+
+[tool.pyright]
+exclude = ["__pycache__", ".venv"]
+ignore = ["bart_score.py"]
+reportMissingTypeStubs = "none"
+reportUnknownMemberType = "none"
+typeCheckingMode = "strict"
+pythonVersion = "3.10"
