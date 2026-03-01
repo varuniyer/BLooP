@@ -126,4 +126,4 @@ Released under the MIT License (see `LICENSE`).
 
 ## Acknowledgments
 
-We acknowledge grants from the National Science Foundation and Google for support for this research. This work used resources available through the National Research Platform (NRP) at the University of California, San Diego. NRP has been developed, and is supported in part, by funding from National Science Foundation, from awards 1730158, 1540112, 1541349, 1826967, 2112167, 2100237, and 2120019, as well as additional funding from community partners.
+We acknowledge grants from the National Science Foundation and Google to support this research. This work used resources available through the National Research Platform (NRP) at the University of California, San Diego. NRP has been developed, and is supported in part, by funding from National Science Foundation, from awards 1730158, 1540112, 1541349, 1826967, 2112167, 2100237, and 2120019, as well as additional funding from community partners.
