@@ -1,12 +1,12 @@
-# BLooP: Bi‑gram Lookahead Promotion (for faithful training‑free summarization)
+# BLooP: Zero-Shot Abstractive Summarization using Large Language Models with Bigram Lookahead Promotion
 
-BLooP is a training‑free decoding intervention that encourages decoder‑only LLMs to form bi‑grams present in the source document, improving summary faithfulness without modifying or fine‑tuning the underlying model. It works as a lightweight logits processor controlled by a single hyperparameter (α). Experiments show consistent ROUGE/BARTScore gains on [Llama‑3.1‑8B‑Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct), [Mistral‑Nemo‑Instruct‑2407](https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407), and [Gemma‑2‑9B‑IT](https://huggingface.co/google/gemma-2-9b-it) across CNN/DM, CCSum, Multi‑News, and SciTLDR, with human evaluation indicating improved faithfulness without reducing readability.
+Abstractive summarization requires models to generate summaries that convey information in the source document. While large language models can generate summaries without fine-tuning, they often miss key details and include extraneous information. We propose BLooP (Bigram Lookahead Promotion), a simple training-free decoding intervention that encourages large language models (LLMs) to generate tokens that form bigrams from the source document. BLooP operates through a hash table lookup at each decoding step, requiring no training, fine-tuning, or model modification. We demonstrate improvements in ROUGE and BARTScore for [Llama‑3.1‑8B‑Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct), [Mistral‑Nemo‑Instruct‑2407](https://huggingface.co/mistralai/Mistral-Nemo-Instruct-2407), and [Gemma‑2‑9B‑IT](https://huggingface.co/google/gemma-2-9b-it) on CNN/DM, CCSum, Multi-News, and SciTLDR. Human evaluation shows that BLooP significantly improves faithfulness without reducing readability.
 
 ---
 
 ## How BLooP works
 
-At each generation step, BLooP checks whether the pair *(previous token, candidate token)* appears as a bi‑gram in the input document. If so, it promotes that candidate by adjusting its logit by α. Promotion is constant across all matching candidates, so their relative order is unchanged. This yields an efficient, training‑free copy mechanism implemented with a hash‑table bi‑gram cache during decoding.
+At each generation step, BLooP checks whether the pair *(previous token, candidate token)* appears as a bigram in the input document. If so, it promotes that candidate by adjusting its logit by α. Promotion is constant across all matching candidates, so their relative order is unchanged. This yields an efficient, training‑free copy mechanism implemented with a hash‑table bigram cache during decoding.
 
 ---
 
